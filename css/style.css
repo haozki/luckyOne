@@ -1,0 +1,77 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    min-height: 100%;
+    padding: 0;
+}
+
+#gallery {
+    padding: 50px;
+}
+
+#gallery li {
+    width: 10%;
+    box-sizing: border-box;
+    list-style: none;
+    perspective: 100px;
+    -webkit-perspective: 100px;
+    padding: 1px;
+    float: right;
+    position: relative;
+    transition: .1s;
+    -webkit-transition: 0.1s;
+}
+
+#gallery a {
+    display: block;
+    vertical-align: bottom;
+    overflow: hidden;
+    background: rgba(0,0,0,0.1);
+    transition: .4s ease-out;
+    -webkit-transition: 0.4s ease-out;
+    -webkit-transform: rotateX(90deg) translate(-50px,-50%);
+    transform: rotateX(90deg) translate(-50px,-50%);
+}
+
+#gallery a:active, #gallery a:focus {
+    outline: none;
+}
+
+#gallery a img {
+    display: block;
+    width: 100%;
+    transition: .3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+}
+
+#gallery .loaded a {
+    -webkit-transform: rotateX(0deg) translate(0,0);
+    transform: rotateX(0deg) translate(0,0);
+}
+
+#gallery li.loaded.hover, #gallery li.loaded:hover {
+    z-index: 2;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
+
+#gallery li.loaded.hover a, #gallery li.loaded a:hover {
+    box-shadow: 0 0 0 2px #FFF, 0 0 20px 5px #000;
+    transition: .1s;
+    -webkit-transition: 0.1s;
+}
+
+#gallery li.loaded.hover img, #gallery li.loaded:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
