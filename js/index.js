@@ -9,7 +9,7 @@
     var photos = [];
 
     for (var i=1; i<=photo_num; i++){
-        photos.push('img/'+Math.ceil(Math.random()*file_num)+'.jpg');
+        photos.push('photo/'+Math.ceil(Math.random()*file_num)+'.jpg');
     }
 
     var loadedIndex = 1;
@@ -64,7 +64,7 @@
                 $(this)
                     .removeClass('animated bounce')
                     .find('img')
-                    .attr('src','img/'+Math.ceil(Math.random()*file_num)+'.jpg')
+                    .attr('src','photo/'+Math.ceil(Math.random()*file_num)+'.jpg')
 
             });
     },100);
@@ -86,7 +86,7 @@
                 $('#gallery li:eq('+Math.ceil(Math.random()*photo_num)+')').addClass('focus');
             },100);
             timer_small = setInterval(function(){
-                $('#gallery li:eq('+Math.ceil(Math.random()*photo_num)+') img').attr('src','img/'+Math.ceil(Math.random()*file_num)+'.jpg');
+                $('#gallery li:eq('+Math.ceil(Math.random()*photo_num)+') img').attr('src','photo/'+Math.ceil(Math.random()*file_num)+'.jpg');
             },1);
         }else{
             $(this).data('action','start').html('Go');
