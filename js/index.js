@@ -83,10 +83,10 @@
             $(this).data('action','stop').html('Stop');
             timer_big = setInterval(function(){
                 $('#gallery li.focus').removeClass('focus hover');
-                $('#gallery li:eq('+Math.ceil(Math.random()*photo_num)+')').addClass('focus');
+                $('#gallery li:eq('+Math.floor(Math.random()*photo_num)+')').addClass('focus');
             },100);
             timer_small = setInterval(function(){
-                $('#gallery li:eq('+Math.ceil(Math.random()*photo_num)+') img').attr('src','photo/'+Math.ceil(Math.random()*file_num)+'.jpg');
+                $('#gallery li:eq('+Math.floor(Math.random()*photo_num)+') img').attr('src','photo/'+Math.ceil(Math.random()*file_num)+'.jpg');
             },1);
         }else{
             $(this).data('action','start').html('Go');
